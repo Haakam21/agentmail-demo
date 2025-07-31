@@ -13,6 +13,7 @@ inbox = client.inboxes.create(
 webhook = client.webhooks.create(
     url="https://agentmail.onrender.com/chat",
     inbox_ids=[inbox.inbox_id],
+    event_types=["message.received"],
     client_id="demo-webhook",
 )
 
