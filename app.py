@@ -11,8 +11,8 @@ inbox = client.inboxes.create(
 )
 
 webhook = client.webhooks.create(
-    inbox_id=inbox.inbox_id,
     url="https://agentmail.onrender.com/chat",
+    inbox_ids=[inbox.inbox_id],
     client_id="demo-webhook",
 )
 
