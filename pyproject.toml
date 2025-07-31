@@ -1,0 +1,12 @@
+[project]
+name = "agentmail-demo"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "agentmail>=0.0.45",
+    "flask>=3.1.1",
+    "gunicorn>=23.0.0",
+    "openai-agents>=0.2.4",
+]
