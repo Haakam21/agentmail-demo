@@ -4,11 +4,16 @@ from agentmail import AgentMail, Message
 
 client = AgentMail()
 
-inbox = client.inboxes.create(username="demo", domain="agentmail.to")
+inbox = client.inboxes.create(
+    username="demo",
+    domain="agentmail.to",
+    client_id="demo-inbox",
+)
 
 webhook = client.webhooks.create(
     inbox_id=inbox.inbox_id,
     url="https://agentmail.onrender.com/chat",
+    client_id="demo-webhook",
 )
 
 
